@@ -33,5 +33,5 @@ dirlist = function(dir) {
 dl = dirlist(theme_loc)
 
 for(var i in dl) {
-	exec('lessc --source-map='theme_loc + dl[i] + '/' + dl[i] + '.css.map ' + theme_loc + dl[i] + '.less > ' + theme_loc + dl[i] + '/' + dl[i] + '.css', puts);
+	exec('lessc --source-map=' + theme_loc + dl[i] + '/' + dl[i] + '.css.map ' + theme_loc + dl[i] + '.less > ' + theme_loc + dl[i] + '/' + dl[i] + '.css', puts);
 }
