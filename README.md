@@ -1,10 +1,23 @@
 # LESS Theme Generator
 
-The general idea behind this is to create a directory that is laid out with files titled THEMENAME.less and then subdirectories named THEMENAME.
+This script will need to point at a directory of LESS files.  Inside that directory, there will need to be a themes.json file that lists all the various themes to be used to generate the CSS.  
 
-This script will go through that directory and generate CSS using LESS for each of those THEMENAME.less files and place them in the subdirectories.
+The json file should look like this:
 
-This is helpful as those .less files can be specific to a theme, and then include other .less files that encompass the broder LESS that will be used for all themes.
+```json
+{
+	"themes": [
+		"simple",
+		"bright",
+		"holiday",
+		"summer"
+	]
+}
+```
+
+This script will pass a global "theme" variable into your less files that can then be used to import theme specific LESS.
+
+Then, the CSS will be output into seperate directories for each theme inside your CSS directory.
 
 To install, run:
 
@@ -12,4 +25,4 @@ npm install -g less-theme-generator
 
 Then to use:
 
-lesstheme THEMEDIR
+lesstheme LESSDIR
