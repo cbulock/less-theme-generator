@@ -42,10 +42,17 @@ for ( var t in themes ) {
 		less.render( data, {
 			sourceMap: true,
 			compress: true,
+			globalVars: {
+				theme: themes[t]
+			},
 		}, function( err, output ) {
-			//write out the files
-			fs.writeFileSync( css_filename, output.css);
-			fs.writeFileSync( sourcemap_filename, output.map);
+			if (err) {
+				console.log( "ERR: " + err.message );
+			} else {
+				//write out the files
+				fs.writeFileSync( css_filename, output.css);
+				fs.writeFileSync( sourcemap_filename, output.map);
+			}
 		});
 	};
 }
