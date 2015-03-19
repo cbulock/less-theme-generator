@@ -5,7 +5,7 @@ var fs = require('fs');
 
 args = process.argv
 
-var less_dir = '.';
+var less_dir = __dirname;
 if (args.length > 2) {
  less_dir = less_dir + '/' + args[2];
 }
