@@ -1,7 +1,7 @@
 {
   "name": "less-theme-generator",
   "preferGlobal": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Cameron Bulock <cameron@bulock.com>",
   "description": "Create CSS themes using LESS",
   "bin": {
@@ -16,7 +16,7 @@
     "theme"
   ],
   "dependencies" : {
-    "less"   :  "1.5.x"
+    "less"   :  "2.x"
   },
   "license": "MIT",
   "engines": {
